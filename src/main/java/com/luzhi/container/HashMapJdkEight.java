@@ -128,7 +128,7 @@ import java.util.concurrent.*;
  */
 public class HashMapJdkEight {
 
-    protected static final int THREAD_LOOP_NUMBER = 0xffffff >>> 2;
+    protected static final int THREAD_LOOP_NUMBER = 0xfff >>> 2;
 
 
     public static void main(String[] args) {
