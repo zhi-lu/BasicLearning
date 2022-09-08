@@ -27,7 +27,7 @@ public class UsageUnsafe {
 
         Field declaredField = UsageUnsafe.class.getDeclaredFields()[0];
         declaredField.setAccessible(true);
-        // 获取字段的位置
+        // 获取对象的属性在内存的偏移量,相当于在可以通过这个偏移量找到对象属性在内存的位置.
         long offset = unsafe.objectFieldOffset(declaredField);
         System.out.println(offset);
         // 底层使用JVM中C++的方法去加锁 lock cmpxchg 锁.{关中断,缓存锁 存在对象大于缓存,锁总线 拉高北桥电平信号}
