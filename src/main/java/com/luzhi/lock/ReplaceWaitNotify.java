@@ -55,7 +55,7 @@ public class ReplaceWaitNotify {
             try {
                 // 将等待的线程进行唤醒.如果当前线程唤醒和其他线程并且持有同一个Condition所关联的锁。则将选择一个进行唤醒.
                 System.out.format("singal开始当前执行的线程是:%s, 时间是%s\n", Thread.currentThread().getName(), System.currentTimeMillis());
-                Thread.sleep(1000L);
+                Thread.sleep(3000L);
                 QUEUE.add(string);
                 CONDITION.signal();
                 System.out.format("singal结束当前执行的线程是:%s, 时间是%s\n", Thread.currentThread().getName(), System.currentTimeMillis());
