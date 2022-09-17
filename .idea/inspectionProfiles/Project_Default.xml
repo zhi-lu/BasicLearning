@@ -4,5 +4,15 @@
     <inspection_tool class="JavadocReference" enabled="true" level="ERROR" enabled_by_default="true">
       <option name="REPORT_INACCESSIBLE" value="false" />
     </inspection_tool>
+    <inspection_tool class="MavenPackageUpdate" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="excludeList">
+        <list>
+          <option value="ch.qos.logback:logback-classic" />
+          <option value="org.junit.jupiter:junit-jupiter-api" />
+          <option value="org.slf4j:slf4j-log4j12" />
+          <option value="org.slf4j:slf4j-api" />
+        </list>
+      </option>
+    </inspection_tool>
   </profile>
 </component>

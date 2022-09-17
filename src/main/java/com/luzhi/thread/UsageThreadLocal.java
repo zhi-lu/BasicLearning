@@ -29,7 +29,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * <p>
  * 如何解决内存泄露问题{
  * 如何出现内存泄露问题的呢? 因为对于我们的{@link ThreadLocal}来说,其内部静态类<tt>ThreadLocalMap</tt>的key -> {@link ThreadLocal}对象
- * 为弱引用. 而我们的value是一个强引用.当出现垃圾回收的时候会回收key.此时就会出现key为null的value这种情况.
+ * 为弱引用. 而我们的value是一个强引用.当出现垃圾回收的时候会回收key的值.此时就会出现key为null的value这种情况.
  * <p>
  * ThreadLocalMap 实现中已经考虑了这种情况, 在调用 {@code #get(), #set(), #remove()} 方法的时候. 会清理掉key为null的记录.
  * 如果说会出现内存泄漏, 那只有在出现了key为null情况后. 没有手动调用{@code #remove()}方法. 并且之后也不再调用{@code #get(), #set(), #remove()} 方法的情况下.
